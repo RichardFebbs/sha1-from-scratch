@@ -113,13 +113,13 @@ void sha1(const uint8_t* msg, size_t msg_len, uint8_t hash[20]) {
         uint32_t a = h0, b = h1, c = h2, d = h3, e = h4;
         uint32_t f, k;
         for (int i = 0; i < 80; i++) {
-            if ( i >= 0 & i <= 19) {
+            if (( i >= 0) & (i <= 19)) {
                 f = (b & c) | ((~b) & d);
                 k = 0x5A827999;
-            } else if ( i >= 20 & i <= 39) {
+            } else if (( i >= 20) & (i <= 39)) {
                 f = (b ^ c ^ d);
                 k = 0x6ED9EBA1;
-            } else if (i >= 40 & i <= 59) {
+            } else if ((i >= 40) & (i <= 59)) {
                 f = (b & c) | (b & d) | (c & d);
                 k = 0x8F1BBCDC;
             } else {
