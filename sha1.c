@@ -2,6 +2,7 @@
 #include <stdint.h>
 #include <string.h>
 #include <stdlib.h>
+#include "sha1.h"
 
 uint32_t rotleft(uint32_t x, unsigned char n) {
 	return (x << n) | (x >> (32 - n));
