@@ -17,7 +17,7 @@ MYFILES ?= git.log main.c makefile
 all: main
 
 clean:
-		@rm -f main main.o
+		@rm -f main *.o
 
 main: main.o sha1.o
 		@$(CC) main.o -o main sha1.o $(LDFLAGS)
